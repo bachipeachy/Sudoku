@@ -18,8 +18,8 @@ Fill a 9×9 grid so each row, column, and mutually exclusive 3×3 sub-grids cont
 - Built and bundled as a standalone mac `Sudoku by Bachi.dmg` (no Python required)
 
 ## How to Run
-Download and double click "Sudoku by Bachi.dmg" package for Mac and drop it in the application folder. It has no dependencies
-Or, run in any laptop command line "python sudoku.py" after "pip install toga" -- the only dependency for GUI
+Download and double click "Sudoku by Bachi.dmg" package for Mac and drop it in the application folder. It has no dependencies.
+Or, run python script on command line "python sudoku.py" after "pip install toga"-- the python library for GUI.
 
 ## Developer
 
@@ -34,7 +34,7 @@ pip install toga toga-cocoa py2app
 python setup.py py2app
 ```
 
-This creates a standalone `Sudoku by Bachi.app` in the `dist/` folder.
+This will create a standalone "Sudoku by Bachi.app" in the `dist/` folder.
 
 
 ## License
