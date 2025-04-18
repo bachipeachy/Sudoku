@@ -127,7 +127,7 @@ class SudokuApp(toga.App):
         self.solution_board = [row[:] for row in full_board]
 
         puzzle = self.mask_board(full_board, difficulty)
-
+        count = []
         for r in range(9):
             for c in range(9):
                 val = puzzle[r][c]
@@ -170,15 +170,15 @@ class SudokuApp(toga.App):
     def mask_board(self, board, difficulty):
         puzzle = [row[:] for row in board]
         clues = {
-            "Easy": random.randint(25, 29),
-            "Medium": random.randint(30, 35),
-            "Hard": random.randint(36, 45),
+            "Easy": random.randint(40, 48),
+            "Medium": random.randint(32, 40),
+            "Hard": random.randint(24, 32),
         }.get(difficulty, 36)
 
         cells = [(r, c) for r in range(9) for c in range(9)]
         random.shuffle(cells)
 
-        while len(cells) > 81 - clues:
+        while len(cells) > clues:
             r, c = cells.pop()
             puzzle[r][c] = 0
         return puzzle
